@@ -1,4 +1,4 @@
-import * as App from "@app/main"
+import * as App from "@app/5/main"
 import * as T from "@effect-ts/core/Effect"
 import * as Exit from "@effect-ts/core/Effect/Exit"
 import * as L from "@effect-ts/core/Effect/Layer"
