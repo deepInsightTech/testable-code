@@ -2,7 +2,7 @@ import * as E from "@effect-ts/core/Either"
 
 export function helloWorld(name: string) {
   return (): E.Either<never, void> => {
-    console.log(`Hello World: ${name}`)
+    console.log(`Hello World: ${name}`)  // concerete implementation
     return E.right(undefined)
   }
 }

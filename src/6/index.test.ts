@@ -1,6 +1,7 @@
 import * as App from "@app/5/main"
 import * as T from "@effect-ts/core/Effect"
 import * as Exit from "@effect-ts/core/Effect/Exit"
+import * as L from "@effect-ts/core/Effect/Layer"
 import { pipe } from "@effect-ts/core/Function"
 
 describe("App", () => {
@@ -27,20 +28,24 @@ describe("App", () => {
   })
   it("should raise for numbers greater then 0.5", async () => {
     const messages: string[] = []
-    
-    const res = await pipe(
-      App.program,
-      T.provideService(App.ConsoleService)({
+    const TestConsole = L.fromEffect(App.ConsoleService)(
+      T.succeed({
         log: (message) =>
           T.effectTotal(() => {
-            console.log(message)
+            messages.push(message)
           })
-      }),
-      T.provideService(App.RandomService)({
+      })
+    )
+    const TestRandom = L.fromEffect(App.RandomService)(
+      T.succeed({
         rand: T.effectTotal(() => {
-          return Math.random()
+          return 0.51
         })
-      }),
+      })
+    )
+    const res = await pipe(
+      App.program,
+      T.provideSomeLayer(TestConsole["+++"](TestRandom)),
       T.runPromiseExit
     )
 
