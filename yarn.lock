@@ -312,35 +312,32 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@effect-ts/core@^0.28.1":
-  version "0.28.1"
-  resolved "https://registry.yarnpkg.com/@effect-ts/core/-/core-0.28.1.tgz#2fdf2f57768db962675a7b69c21704c42b19fcbf"
-  integrity sha512-QkDmtkvynZz0yXCne9RkxnGWF2rfZvwx1socn+x2Y1ytEhoh4nhRlu6t8qD6lDOsMgcVOFsRgNxd2EQg6Gz1XA==
+"@effect-ts/core@^0.37.5":
+  version "0.37.5"
+  resolved "https://registry.yarnpkg.com/@effect-ts/core/-/core-0.37.5.tgz#b183190e411537ce24e5c173abbc5110bb893a52"
+  integrity sha512-u+qELJSaBhPFzLI3y91g9unruHWx09VFClQ5CIZmtTOGxR6BrjjaheBapBgBT6gVEPdKim/4RFnIbG/H05Idew==
   dependencies:
-    "@effect-ts/system" "^0.25.1"
-    "@effect-ts/tracing-utils" "^0.5.0"
+    "@effect-ts/system" "^0.34.5"
 
-"@effect-ts/node@^0.17.0":
-  version "0.17.0"
-  resolved "https://registry.yarnpkg.com/@effect-ts/node/-/node-0.17.0.tgz#0b6f7ff2ba01af14ecb4d0c42434dc693baf160b"
-  integrity sha512-8vHtPPQMDT1JVglsnQkqW1M0ArHqnoh8ZYKaKk6uCmgv0PhbgJi2qXuOdq60RSC9DAJDUyg7J87qGDNFDsCaUg==
+"@effect-ts/node@^0.23.0":
+  version "0.23.0"
+  resolved "https://registry.yarnpkg.com/@effect-ts/node/-/node-0.23.0.tgz#07128ef535dca159e6b82fc99e9a7442b1331c3f"
+  integrity sha512-K0ZNIzceLkFMySPWHfmLp6qSPif2vfCxgkLKl74xXfVLFcXZEN0C4yyWTjNd48Sb+Tt03fcG00wUgGDMs7Lj2Q==
 
-"@effect-ts/system@^0.25.1":
-  version "0.25.1"
-  resolved "https://registry.yarnpkg.com/@effect-ts/system/-/system-0.25.1.tgz#6909ad89a4317e71c6dafd6d2d3ba1c9c567305d"
-  integrity sha512-fcEL+b9TshpMJ8j3e97ke8B6QZkKW5UN0qMtTAOshy1cNl5cH4v33lqtu4OHZk9EXH7IBmjmVbD64mPOJu0YEQ==
-  dependencies:
-    "@effect-ts/tracing-utils" "^0.5.0"
+"@effect-ts/system@^0.34.5":
+  version "0.34.5"
+  resolved "https://registry.yarnpkg.com/@effect-ts/system/-/system-0.34.5.tgz#4b44aaeb5df1c2d17652a9a2a8258cc6d5050e20"
+  integrity sha512-1t+8hNzWdn3AGIzaTQqyBQETJbvn3DYLbSBH4AItxT1IHivKJscIXKSWfGP2sa2LfTtSoXhBc8Mic5YoFG/n6w==
 
 "@effect-ts/tracing-plugin@^0.8.0":
   version "0.8.0"
   resolved "https://registry.yarnpkg.com/@effect-ts/tracing-plugin/-/tracing-plugin-0.8.0.tgz#de8f09a811fbff7e066f7a0c889a05eaa2c59f26"
   integrity sha512-synxqI7bJGMo8r/ECMj71qeVBbKTJeTLxIRLlJImNmIF4NpMNusjz/9NpNI7vSwXm0jDYTL9vevpjFNOLHdTug==
 
-"@effect-ts/tracing-utils@^0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@effect-ts/tracing-utils/-/tracing-utils-0.5.0.tgz#326abca9192253f1362fa9c713b8e0bf19285833"
-  integrity sha512-KzjgsvPrX/0Eg76yV4R6avWUG5/xmojXBVgw0P7rUlqHjGf4bpGe/ocOUWXsTh+ZmpqD1V3c3TWaCdBtTNdNmQ==
+"@effect-ts/tracing-utils@^0.5.2":
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/@effect-ts/tracing-utils/-/tracing-utils-0.5.2.tgz#d73f32dd5b16dd0da8a2c873c5dc8e0f203011ec"
+  integrity sha512-sjIML3B9DdQ92STfZl8bsOuvTnprf6VoW9CYbILjt7wvdAp5kCSeP2bSMoTGXy2C83SLnGvhMdCI+dSiB8A42w==
 
 "@eslint/eslintrc@^0.4.0":
   version "0.4.0"
@@ -975,6 +972,13 @@ aws4@^1.8.0:
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.11.0.tgz#d61f46d83b2519250e2784daf5b09479a8b41c59"
   integrity sha512-xh1Rl34h6Fi1DC2WWKfxUTVqRsNnr6LsKz2+hfwDxQJWmrx8+c7ylaqBMcHfl1U1r2dsifOvKX3LQuLNZ+XSvA==
+
+axios@^0.21.1:
+  version "0.21.1"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.1.tgz#22563481962f4d6bde9a76d516ef0e5d3c09b2b8"
+  integrity sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==
+  dependencies:
+    follow-redirects "^1.10.0"
 
 babel-jest@^26.6.3:
   version "26.6.3"
@@ -2020,6 +2024,11 @@ flatted@^3.1.0:
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.1.1.tgz#c4b489e80096d9df1dfc97c79871aea7c617c469"
   integrity sha512-zAoAQiudy+r5SvnSw3KJy5os/oRJYHzrzja/tBDqrZtNhUw8bt6y8OBzMWcjWr+8liV8Eb6yOhw8WZ7VFZ5ZzA==
 
+follow-redirects@^1.10.0:
+  version "1.14.0"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.0.tgz#f5d260f95c5f8c105894491feee5dc8993b402fe"
+  integrity sha512-0vRwd7RKQBTt+mgu87mtYeofLFZpTas2S9zY+jIeuLJMNvudIgF52nr19q40HOwH5RrhWIPuj9puybzSJiRrVg==
+
 for-in@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/for-in/-/for-in-1.0.2.tgz#81068d295a8142ec0ac726c6e2200c30fb6d5e80"
@@ -2360,6 +2369,11 @@ io-ts-extra@0.11.4:
   dependencies:
     fp-ts "^2.1.0"
     io-ts "^2.2.4"
+
+io-ts@2.2.4:
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/io-ts/-/io-ts-2.2.4.tgz#c9b5390b8c60b9976ad03f670a6b976fe50d4083"
+  integrity sha512-a8A/3jekTgSPfQ+OG40sTiX2gohXZz89X1+TfKsWJ/vpA2dBilBkrGYPiDE8OaKMMG7xm5ma3SAZL5eNr4Bi2w==
 
 io-ts@^2.2.4:
   version "2.2.16"
