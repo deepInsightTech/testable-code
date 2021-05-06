@@ -7,9 +7,9 @@ type HasStringMessage = { message: string }
 
 /** Return a Task wrapping an axios GET request */
 export const getTask =
-  <A>(url: string): TE.TaskEither<Failure, AxiosResponse<A>> =>
+  <A>(url: string, headers?: any): TE.TaskEither<Failure, AxiosResponse<A>> =>
     TE.tryCatch(
-      async () => axios.get<A>(url),
+      async () => headers ? axios.get<A>(url, headers) : axios.get<A>(url),
       e =>
         typeof e === 'object'
         && e !== null

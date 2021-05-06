@@ -23,13 +23,14 @@ export type Expectations<T> = {
 /** The necessary data to provide to test an endpoint. */
 export type CheckEndpointDeps<T> = {
   url: string,
-  expectations: Expectations<T>
+  expectations: Expectations<T>,
+  headers?: any
 }
 
 /** Assert that the response of an endpoint meets a set of predefined conditions. */
 export const checkEndpoint = <R>(deps: CheckEndpointDeps<R>): TE.TaskEither<Failure, Success<R>> => {
   return pipe(
-    getTask<TypeOf<typeof deps.expectations.schema>>(deps.url),
+    getTask<TypeOf<typeof deps.expectations.schema>>(deps.url, deps.headers),
     TE.chain(r => TE.fromEither(pipe(
       r,
       assertEndpointStatus(deps.expectations.status),
