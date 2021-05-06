@@ -42,12 +42,12 @@ pipe(
   program,
   T.provideService(ConsoleService)({
     log: (message) =>
-      T.effectTotal(() => {
+      T.succeedWith(() => {
         console.log(message)
       })
   }),
   T.provideService(RandomService)({
-    rand: T.effectTotal(() => {
+    rand: T.succeedWith(() => {
       return Math.random()
     })
   }),
