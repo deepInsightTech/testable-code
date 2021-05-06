@@ -1,5 +1,5 @@
 import { pipe } from "@effect-ts/system/Function";
-import * as A from "@effect-ts/core/Collections/Immutable/Array"
+import * as A from "@effect-ts/core/Array"
 import * as E from "@effect-ts/core/Either"
 import { getCovariantComposition } from "@effect-ts/core/Prelude";
 
