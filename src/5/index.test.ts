@@ -10,12 +10,12 @@ describe("App", () => {
       App.program,
       T.provideService(App.ConsoleService)({
         log: (message) =>
-          T.effectTotal(() => {
+          T.succeedWith(() => {
             messages.push(message)
           })
       }),
       T.provideService(App.RandomService)({
-        rand: T.effectTotal(() => {
+        rand: T.succeedWith(() => {
           return 0.49
         })
       }),
@@ -32,12 +32,12 @@ describe("App", () => {
       App.program,
       T.provideService(App.ConsoleService)({
         log: (message) =>
-          T.effectTotal(() => {
+          T.succeedWith(() => {
             console.log(message)
           })
       }),
       T.provideService(App.RandomService)({
-        rand: T.effectTotal(() => {
+        rand: T.succeedWith(() => {
           return Math.random()
         })
       }),

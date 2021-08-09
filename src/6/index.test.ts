@@ -11,12 +11,12 @@ describe("App", () => {
       App.program,
       T.provideService(App.ConsoleService)({
         log: (message) =>
-          T.effectTotal(() => {
+          T.succeedWith(() => {
             messages.push(message)
           })
       }),
       T.provideService(App.RandomService)({
-        rand: T.effectTotal(() => {
+        rand: T.succeedWith(() => {
           return 0.49
         })
       }),
@@ -31,14 +31,14 @@ describe("App", () => {
     const TestConsole = L.fromEffect(App.ConsoleService)(
       T.succeed({
         log: (message) =>
-          T.effectTotal(() => {
+          T.succeedWith(() => {
             messages.push(message)
           })
       })
     )
     const TestRandom = L.fromEffect(App.RandomService)(
       T.succeed({
-        rand: T.effectTotal(() => {
+        rand: T.succeedWith(() => {
           return 0.51
         })
       })

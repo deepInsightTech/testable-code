@@ -10,12 +10,12 @@ pipe(
   T.retry(S.exponential(10)["&&"](S.recurs(10))),
   T.provideService(ConsoleService)({
     log: (message) =>
-      T.effectTotal(() => {
+      T.succeedWith(() => {
         console.log(message)
       })
   }),
   T.provideService(RandomService)({
-    rand: T.effectTotal(() => {
+    rand: T.succeedWith(() => {
       return Math.random()
     })
   }),
